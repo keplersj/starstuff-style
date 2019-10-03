@@ -1,0 +1,55 @@
+{
+  "name": "starstuff-style",
+  "version": "0.0.0-development",
+  "description": "Opinionated, yet simple, base stylesheet",
+  "main": "index.css",
+  "style": "index.css",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keplersj/starstuff-style.git"
+  },
+  "keywords": [
+    "dark-mode",
+    "css",
+    "style",
+    "browser"
+  ],
+  "author": "Kepler Sticka-Jones <kepler@stickajones.org>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keplersj/starstuff-style/issues"
+  },
+  "homepage": "https://github.com/keplersj/starstuff-style#readme",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "jest-runner-prettier": "^0.3.1",
+    "jest-runner-stylelint": "^2.2.0",
+    "prettier": "^1.18.2",
+    "semantic-release": "^15.13.24",
+    "stylelint": "^11.0.0",
+    "stylelint-config-starstuff": "^1.0.1"
+  },
+  "dependencies": {
+    "modern-normalize": "^0.5.0"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-starstuff"
+    ]
+  },
+  "jest": {
+    "projects": [
+      {
+        "displayName": "lint:prettier",
+        "preset": "jest-runner-prettier"
+      },
+      {
+        "displayName": "lint:stylelint",
+        "preset": "jest-runner-stylelint"
+      }
+    ]
+  }
+}
