@@ -59,11 +59,8 @@ blockquote::before {
     text-size-adjust: 100%;
   }
 
+  a,
   body {
-    color: #4a4a4a;
-  }
-
-  a {
     color: #4a4a4a;
   }
 
@@ -76,10 +73,10 @@ blockquote::before {
 @media screen and (prefers-color-scheme: dark) {
   body {
     background-color: #4a4a4a;
-    color: white;
   }
 
-  a {
+  a,
+  body {
     color: white;
   }
 
