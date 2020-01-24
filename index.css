@@ -1,8 +1,6 @@
-html {
-  text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
-}
+/*! starstuff-style | ISC License | https://github.com/keplersj/starstuff-style */
 
+/* Let elements be elements. They can set their own sizing. */
 blockquote,
 body,
 dd,
@@ -26,20 +24,18 @@ textarea {
   padding: 0;
 }
 
+/* Change line height for better legibility. */
 body {
-  color: #4a4a4a;
   line-height: 1.5;
 }
 
-a {
-  color: #4a4a4a;
-}
-
+/* Pull blockquotes to the side to distinguish from the rest of the document. */
 blockquote {
   padding-left: 1.5em;
   position: relative;
 }
 
+/* Give blockquotes a lead-in bar, to better distinguish from the rest of the document.  */
 blockquote::before {
   position: absolute;
   content: "";
@@ -47,10 +43,37 @@ blockquote::before {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #4a4a4a;
 }
 
-@media (prefers-color-scheme: dark) {
+/* Color the blockquote lead-in bar on print. */
+@media print {
+  blockquote::before {
+    background-color: black;
+  }
+}
+
+/* Set color and font optimizations for screens. */
+@media screen {
+  html {
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    color: #4a4a4a;
+  }
+
+  a {
+    color: #4a4a4a;
+  }
+
+  blockquote::before {
+    background-color: #4a4a4a;
+  }
+}
+
+/* Set document changes for screens with dark mode enabled. */
+@media screen and (prefers-color-scheme: dark) {
   body {
     background-color: #4a4a4a;
     color: white;
